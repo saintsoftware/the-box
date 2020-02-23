@@ -1,0 +1,351 @@
+/* FUNCTION LIBRARY */
+
+#include <stdio.h>  // Scanf and printf functionality
+#include <stdlib.h> // Sistem,
+#include <unistd.h> //
+
+#include <sys/types.h> //
+#include <sys/stat.h> //
+
+//#include <gtk/gtk.h> // stdlib stdio
+
+/* EXTERNAL LIBRARY */
+
+//#include <sqlite3.h> // DATABASE may need to download, not included in base package
+
+/* ACCESS LIBRARY */
+
+//#include "interface4.h"
+
+// ========== DECLARATION =================
+
+extern int counter_1;
+extern int counter_2;
+extern int counter_3;
+extern char counter_4[];
+extern int debug; // 1 true, 0 false
+
+//#include <windows.h> // Create simple windows
+//#define _WIN32_IE 0x0400
+
+/*  GENERIC Pointers  */
+
+// This declaration is needed for communication between the file and program.
+
+
+//extern int *int_pointer;
+//extern char *char_pointer;
+//extern float *float_pointer;
+//extern FILE *file_pointer;
+
+/*  F VARIABLES */
+
+/*  GENERIC VARIABLES */
+
+int interface = 1;
+
+int some_var = 13;
+char str1[20];
+
+//counter_4[10] = "test";
+//char a = (string)
+
+// ========== DEFINITION INITIALIZATION =================
+
+debug = 1;
+counter_1 = 10;
+counter_2 = 0;
+counter_3 = 0;
+//int counter_4[10];
+// Don't Call Functions or Includes outside Main. C is single threat doesn't support
+
+
+#include "main.h";
+
+int main(void){ //int argc, char **argv int argc, char *argv
+
+
+
+char counter = "aaa";
+//int counter_4[10] = counter_1;
+//printf("name printed as %%s is %s\n",name);
+
+//printf("teste");
+//printf("counter %s", a);
+//printf("%s\n", counter);
+
+
+	/*
+		PRINT_F
+
+		%c characters
+		%d numbers
+		\n new line
+	*/
+
+	//printf(a);
+    //printf("Enter interface : %i", some_var);
+	//printf("ASCII value = %d, Character = %c\n", ch , ch );
+
+	/*
+	script_insert_cfunc (self, LIEXT_SCRIPT_FILE, "file_read", File_read);
+	script_insert_cfunc (self, LIEXT_SCRIPT_FILE, "file_scan_directory", File_scan_directory);
+	script_insert_cfunc (self, LIEXT_SCRIPT_FILE, "file_scan_save_directory", File_scan_save_directory);
+	script_insert_cfunc (self, LIEXT_SCRIPT_FILE, "file_write", File_write);
+*/
+
+	/* APPLICATION STRUCTURE LIBRARY */
+
+	#include "application_structures\file.c" //
+	//#include "error.c"
+	//#include "string.c"
+	//#include "paths.c"
+	//#include "database.c"
+	//#include "image.c"
+	//#include "image_png.c"
+	//#include "sound.c"
+	//#include "keys.c"
+	//#include "interface.c"
+
+	/* 3D MODELS LIBRARY */
+
+	//#include "model.c"
+	//#include "model_animation.c"
+
+	/* TOOLS LIBRARY */
+
+	//#include "file_manager.c"
+	//#include "variable_manager.c"
+	//#include "spells.c"
+	//#include "character_generator.c"
+
+	/* WINDOW LIBRARY */
+
+	//#include "resolution.c"
+	//#include "game.c"
+
+	/* GAME STRUCTURE LIBRARY */
+
+	//#include "movement.c"
+	//#include "money.c"
+	//#include "loots.c"
+
+	/* TEST LIBRARY */
+
+	//#include "variables_interface.c"
+    //#include "interfaces/interface2.c"
+
+
+	/* Errors  */
+
+	if (debug == 1){
+		//fprintf (stderr, "%s:%d: %s: Assertion `%s' failed.\n", error_file, error_line, error_func, error_assert);
+		//abort ();
+
+		   int m = 22, n = 44;
+        // m, n are local variables of main function
+        /*m and n variables are having scope
+        within this main function only.
+        These are not visible to test funtion.*/
+        /* If you try to access a and b in this function,
+        you will get 'a' undeclared and 'b' undeclared error */
+       //printf("\nvalues : m = %d and n = %d", m, n);
+       //test();
+
+       /*
+    void test()
+    {
+       int a = 50, b = 80;
+            // a, b are local variables of test function
+            /*a and b variables are having scope
+            within this test function only.
+            These are not visible to main function.
+            /* If you try to access m and n in this function,
+            you will get 'm' undeclared and 'n' undeclared
+            error
+       printf("\nvalues : a = %d and b = %d", a, b);
+    }
+    */
+}
+
+//int main (int argc, char** argv){ //double pointer
+
+	/*
+	LIMdlBuilder* builder;
+	LIMdlModel* model;
+
+	if (!argc || !strcmp (argv[1], "--help") || !strcmp (argv[1], "-h"))
+	{
+		printf ("Usage: %s [lmdl...]\n", argv[0]);
+		return 0;
+	}
+	*/
+	/*
+
+	for (i = 1 ; i < argc ; i++)
+	{
+		/* Load the model.
+		model = model_new_from_file (argv[i], 1);
+		if (model == NULL)
+		{
+			lisys_error_report ();
+			continue;
+		}
+
+		/* Check for existing LOD.
+		if (!model->lod.array[0].indices.count)
+		{
+			printf ("      Unneeded %s\n", argv[i]);
+			continue;
+		}
+		if (model->lod.count > 1)
+		{
+			printf ("%3d%%: Existing %s\n", 100 - 100 *
+				model->lod.array[model->lod.count - 1].indices.count /
+				model->lod.array[0].indices.count, argv[i]);
+			limdl_model_free (model);
+			continue;
+		}
+
+		/* Build the detail levels.
+		builder = limdl_builder_new (model);
+		if (builder == NULL)
+		{
+			lisys_error_report ();
+			limdl_model_free (model);
+			continue;
+		}
+		limdl_builder_calculate_lod (builder, 5, 0.05f);
+		limdl_builder_finish (builder, 0);
+		limdl_builder_free (builder);
+
+		/* Save the modified model.
+		printf ("%3d%%: Built    %s\n", 100 - 100 *
+			model->lod.array[model->lod.count - 1].indices.count /
+			model->lod.array[0].indices.count, argv[i]);
+		limdl_model_write_file (model, argv[i]);
+		limdl_model_free (model);
+	}
+
+*/
+	//lips
+
+	/* Main Menu  */
+
+	printf("Choose interface : ");
+    scanf("%s", str1);
+
+	printf("Enter interface : %s", str1);
+
+	interface = atoi (str1); // Convertes the string to a integer
+
+	/*
+	if(interface == 1){ // Character Creator
+
+			//printf("Character Creator loading");
+
+			//#include "interfaces/character_generator.c"
+	}
+	else if(interface == 2){ // Shadder Tool
+			//printf("Interface2");
+			//#include "interfaces/interface2.c"
+	}
+	else if(interface == 3){ // Map Editor
+			//printf("Interface3");
+			//#include "interfaces/interface3.c"
+	}
+	else if(interface == 4){ // Variable Manager
+			//printf("Interface3");
+			//#include "interfaces/interface3.c"
+	}
+	else if(interface == 5){ // Generic Animation
+			//printf("Interface3");
+			//#include "interfaces/interface3.c"
+	}
+	else if(interface == 6){ // Particle Tool
+			//printf("Interface3");
+			//#include "interfaces/interface3.c"
+	}
+	else if(interface == 7){ // Particle Tool
+			//printf("Interface3");
+			//#include "interfaces/interface3.c"
+	}
+	else if(interface == 8){ // Level Models Position
+			//printf("Interface3");
+			//#include "applications/the_box/levels_models_position.c"
+	}
+	else if(interface == 9){ // Level Editor
+
+
+
+			//printf("Interface9");
+
+			//#include "applications/the_box/levels_models_position.c"
+	}
+	else if(interface == 10){ // Database tool
+			//printf("Interface9");
+			//#include "applications/the_box/levels_models_position.c"
+	}
+
+*/
+
+	system("cls");
+	system("pause");
+
+
+    return 0; // Zero indicates success any other failed
+}
+
+
+/*
+
+static GtkWidget *number1;
+static GtkWidget *number2;
+static GtkWidget *result;
+
+void do_calculate(GtkWidget *calculate, gpointer data) {
+
+    int num1 = atoi((char *)gtk_entry_get_text(GTK_ENTRY(number1)));
+    int num2 = atoi((char *)gtk_entry_get_text(GTK_ENTRY(number2)));
+
+    char buffer[32];
+    snprintf(buffer, sizeof(buffer), "result: %d", num1 + num2);
+
+    gtk_label_set_text(GTK_LABEL(result), buffer);
+}
+
+// gcc 007_gtk.c -o 007_gtk `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0`
+int main(int argc, char **argv) {
+
+    GtkWidget *window, *grid, *calculate;
+    gtk_init(&argc, &argv);
+
+    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
+
+    grid = gtk_grid_new();
+    gtk_container_add(GTK_CONTAINER(window), grid);
+
+    number1 = gtk_entry_new();
+    gtk_grid_attach(GTK_GRID(grid), number1, 0, 0, 1, 1);
+
+    number2 = gtk_entry_new();
+    gtk_grid_attach(GTK_GRID(grid), number2, 1, 0, 1, 1);
+
+    calculate = gtk_button_new_with_label("calculate");
+    g_signal_connect(calculate, "clicked", G_CALLBACK(do_calculate), NULL);
+    gtk_grid_attach(GTK_GRID(grid), calculate, 2, 0, 1, 1);
+
+    result = gtk_label_new("result:");
+    gtk_grid_attach(GTK_GRID(grid), result, 3, 0, 1, 1);
+
+    gtk_widget_show_all(window);
+    gtk_main();
+
+    return 0;
+}
+
+*/
+
+
+
