@@ -1,0 +1,5 @@
+1, Jack Coleman , bio_id , skills_id , spells_id, items_id, weapons_id, status_id ;
+
+
+
+
