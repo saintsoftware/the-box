@@ -1,0 +1,78 @@
+
+Version 0.0.3
+
+
+The theme for Version 3 is:  finish planning.
+
+
+--------
+
+Discription :
+
+Create several pdfs files - to separete and organize information. 
+
+image folder - 		width images planning for in case we need to access images, and finished base planing, some things still are updates for example projects was finished but did 2 updates; 
+
+New tools - Emulator, structure and install tool
+
+New objects - file map, and structure to work width the internal part
+
+Images:
+
+- code editor
+- text editor
+- torrents
+- links
+- install tool
+- structure
+- libraries
+
+Folders :
+
+- stack_labraries folder
+- image folder 
+
+PDFs:
+
+-tool list. pdf 
+-file list .pdf
+-interface planning
+-forum posts.pdf
+
+
+Objects :
+
+-file map.h
+-code map.h
+-structure.h 
+
+Tools : 
+
+- emultator tool
+- standard install tool 
+- project structure 
+
+
+stack libraries :
+
+- texture_load
+- effect_load
+- model_load
+- object_load
+- object_store
+- open_files
+- display_information
+- array_handle
+- Draw_
+...
+
+debug tools :
+
+-test_bmp
+-test_interface
+-test_model
+-test_open_files
+-test_Structure
+-test_tutorial_tool
+-test_main
+...
