@@ -1,0 +1,5 @@
+/*
+	Emulate Games
+*/
+
+char game;
