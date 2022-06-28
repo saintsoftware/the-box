@@ -1,0 +1,1 @@
+Install the librarys or they don't work, use make, and install dependencys.
